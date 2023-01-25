@@ -1,0 +1,10 @@
+#RELATINAL OPERATORS - USED TO COMPARE 2 OPERANDS
+print(10>20)
+print(20<30)
+print(0>0)
+print(10>=10)
+print(25<=22)
+print(20==30)
+print(20!=20)
+print(True==True)
+print(True!=False)
