@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            margin-top:100px;
+            margin-left:300px;
+            padding:0px;
+            box-sizing: border-box;
+            display:flex;
+            justify-content: center;
+        }
+        .two{
+           
+            display:grid;
+            grid-template-columns: repeat(2,600px);
+        }
+        .three{
+            height:400px;
+            width:300px;
+            border:2px solid green;
+            padding:5px;
+        }
+        a{
+            text-decoration: black;
+            text-decoration:black;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>TASK EXECUTOR</h1></center>
+    <div class="one">
+        <div class="two">
+           
+            <div class="three">
+                <h1><center>Teacher</center></h1><hr><br><Br>
+                    <form action=#>
+                <input type="text" id="op" placeholder="Question here" name="question"><br><br>
+                <button onclick="calculate()">Calculate</button>
+            </form>
+            </div>
+            <div class="three"><center><h1>Student</h1></center><hr>
+                <div id="history">
+                    <input type="text" id="display">
+                    <button onclick="history()">History</button>
+                    <h3>NOTE: History part doesn't works</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let op=document.getElementById('op');
+        
+
+        function display(num){
+            op.value+=num;
+            
+        }
+
+
+
+        function calculate(){
+            try{
+                op.value=eval(op.value);
+            } catch(err){
+                alert('INVALID')
+            }
+        }
+
+        function makeNum(num,func){
+            if (func==undefined){
+                return num;
+            } else{
+                return func(num);
+            }
+        }
+
+        function zero(func){
+            return makeNum(0,func)
+        }
+        function one(func){
+            return makeNum(1,func)
+        }
+        function two(func){
+            return makeNum(2,func)
+        }
+        function three(func){
+            return makeNum(3,func)
+        }
+        function four(func){
+            return makeNum(4,func)
+        }
+        function five(func){
+            return makeNum(5,func)
+        }
+        function six(func){
+            return makeNum(6,func)
+        }
+        function seven(func){
+            return makeNum(7,func)
+        }
+        function eight(func){
+            return makeNum(8,func)
+        }
+        function nine(func){
+            return makeNum(9,func)
+        }
+        
+        function plus(right){
+            return function(left){ return left + right;};
+        }
+        function minus(right){
+            return function(left){ return left - right;};
+        }
+        function times(right){
+            return function(left){ return left * right;};
+        }
+        function dividedBy(right){
+            return function(left){ return left / right;};
+        }
+
+    </script>
+    <center><a href="{% url 'user'%}">LogOut</a></center>
+
+</body>
+</html>

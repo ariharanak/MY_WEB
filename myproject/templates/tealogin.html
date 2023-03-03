@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login Login</title>
+    <style>
+        .one{
+            margin-left:400px;
+            margin-top:100px;
+            padding:0px;
+            box-sizing: border-box;
+            display:flex;
+            height:100px;
+            width:500px;
+            justify-content: center;
+            border:2px solid red;
+            padding:10px;
+        }
+        #log{
+            height:20px;
+            width:50px;
+            border:2px solid black;
+            margin-top: 5px;
+        }
+        a{
+            text-decoration: black;
+            padding:4px;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Teacher Login page</center></h1>
+    <div class="one">
+    <form>
+    <input type="text" placeholder="username">
+    <input type="password" placeholder="password"><br>
+    <div id="log"><a href="{% url 'welcome' %}" link="none">Login</a></div>
+    
+    </form>
+    </div>
+    <h5><center><a href="{% url 'user' %}">Clicke here </a>to go back to user home</center></h5>
+
+</body>
+</html>

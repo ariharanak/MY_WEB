@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+    <style>
+        .one{
+            
+            margin-top:100px;
+            padding:0px;
+            box-sizing: border-box;
+            display:flex;
+            justify-content: center;
+        }
+
+        #con{
+            height:200px;
+            background-color:black;
+            width:200px;
+            border:solid 2px purple;
+            border-radius: 30px;
+        }
+        .two{
+            
+            display:grid;
+            grid-template-columns: repeat(2,300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <a href="{% url 'stulogin' %}"><div id="con"></div></a><br>
+            <h2>STUDENTS' LOGIN</h2>
+            <a href="{% url 'tealogin' %}" ><div id="con"></div></a><br>
+            <h2>TEACHER'S LOGIN</h2>
+        </div>
+    </div>
+
+</body>
+</html>
